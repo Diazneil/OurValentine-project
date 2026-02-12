@@ -6,7 +6,6 @@ const vid = document.querySelector("video");
 
 let count = 2;
 
-// preload gifs (semua file ada di folder yang sama)
 const gifs = [
   "cat-heart.gif",
   "3shocked-1.gif",
@@ -15,59 +14,55 @@ const gifs = [
   "idc.gif"
 ];
 
-gifs.forEach(src => {
+gifs.forEach(src=>{
   const img = new Image();
   img.src = src;
 });
 
-// NO button logic
-no.addEventListener("click", () => {
-  if (count === 2) {
-    gif.src = "3shocked-1.gif";
-    text.innerHTML = "You meant to press YES right? 🤨";
-    yes.style.height = "65%";
-    yes.style.width = "60%";
-    no.style.width = "30%";
+
+// NO BUTTON
+no.addEventListener("click",()=>{
+
+  // BESARKAN TANPA MERUSAK LAYOUT
+  yes.style.transform = "scale(1.15)";
+
+  if(count===2){
+    gif.src="3shocked-1.gif";
+    text.innerHTML="You meant to press YES right? 🤨";
     count++;
 
-  } else if (count === 3) {
-    gif.src = "4.crying.gif";
-    text.innerHTML = "Your hand must have slipped right? 🥹";
-    yes.style.height = "70%";
-    yes.style.width = "70%";
-    no.style.width = "20%";
+  }else if(count===3){
+    gif.src="4.crying.gif";
+    text.innerHTML="Your hand slipped right? 🥹";
     count++;
 
-  } else if (count === 4) {
-    gif.src = "5.crying.gif";
-    text.innerHTML = "Ayangg please,I'm gonna cry 😭";
-    yes.style.height = "80%";
-    yes.style.width = "80%";
-    no.style.fontSize = "4vh";
-    no.style.width = "10%";
+  }else if(count===4){
+    gif.src="5.crying.gif";
+    text.innerHTML="Ayang please... I'm gonna cry 😭";
     count++;
 
-  } else if (count === 5) {
-    gif.src = "5.crying.gif";
-    text.innerHTML = "Pretty Please,give me chance 🥺😘";
-    yes.style.height = "90%";
-    yes.style.width = "96%";
-    no.style.display = "none";
+  }else{
+    gif.src="5.crying.gif";
+    text.innerHTML="Pretty please 🥺❤️";
+    no.style.display="none";
   }
 });
 
-// YES button logic
-yes.addEventListener("click", () => {
-  vid.style.display = "block";
-  gif.src = "idc.gif";
-  text.innerHTML = "Thank you ayangg! I'll make u happy 😘";
 
-  yes.innerHTML = '<a href="https://wa.me/6289628116619" target="_blank">Message me</a>';
-  yes.style.height = "90%";
-  yes.style.width = "96%";
-  no.style.display = "none";
+// YES BUTTON
+yes.addEventListener("click",()=>{
 
-  setTimeout(() => {
-    vid.style.display = "none";
-  }, 9000);
+  vid.style.display="block";
+
+  gif.src="idc.gif";
+  text.innerHTML="Thank you ayangg! ❤️";
+
+  yes.innerHTML =
+  '<a href="https://wa.me/6289628116619" target="_blank">Message me</a>';
+
+  no.style.display="none";
+
+  setTimeout(()=>{
+    vid.style.display="none";
+  },9000);
 });
