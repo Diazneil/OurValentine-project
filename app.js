@@ -45,7 +45,7 @@ no.addEventListener("click",()=>{
 
   }else{
     gif.src="5.crying.gif";
-    text.innerHTML="Pretty please 🥺❤️";
+    text.innerHTML="Pretty please,Give mea chance 🥺❤️";
     no.style.display="none";
   }
 });
@@ -57,7 +57,7 @@ yes.addEventListener("click",()=>{
   vid.style.display="block";
 
   gif.src="idc.gif";
-  text.innerHTML="Thank you ayangg! ❤️";
+  text.innerHTML="Thank you ayangg!I'll make you happy! ❤️";
 
   yes.innerHTML =
   '<a href="https://wa.me/6289628116619" target="_blank">Message me</a>';
