@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #FADADD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* VIDEO BACKGROUND */
+.video-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.video-background video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTAINER (Mobile First) */
+.container {
+    width: 92%;
+    max-width: 380px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* IMAGE */
+.actual-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.gif {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+}
+
+/* TEXT */
+.text-one {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-one p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* BUTTON SECTION */
+.yes-no {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.yes, .no {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    font-family: "Allura", cursive;
+    font-size: 1.6rem;
+    background-color: #FB607F;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.yes:hover, .no:hover {
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "Allura", cursive;
+    font-size: 1.6rem;
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+    .container {
+        max-width: 420px;
+        padding: 30px;
+    }
+
+    .text-one p {
+        font-size: 1.2rem;
+    }
+
+    .yes, .no {
+        height: 55px;
+        font-size: 1.8rem;
+    }
+}
