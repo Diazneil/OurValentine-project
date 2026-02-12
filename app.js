@@ -5,16 +5,16 @@ const text = document.querySelector("#text");
 const vid = document.querySelector("video");
 
 let count = 2;
+let scale = 1; // kontrol pembesaran tombol
 
-const gifs = [
+// preload GIF
+[
   "cat-heart.gif",
   "3shocked-1.gif",
   "4.crying.gif",
   "5.crying.gif",
   "idc.gif"
-];
-
-gifs.forEach(src=>{
+].forEach(src=>{
   const img = new Image();
   img.src = src;
 });
@@ -23,8 +23,10 @@ gifs.forEach(src=>{
 // NO BUTTON
 no.addEventListener("click",()=>{
 
-  // BESARKAN TANPA MERUSAK LAYOUT
-  yes.style.transform = "scale(1.15)";
+  // tombol YES makin besar tanpa merusak layout
+  scale += 0.15;
+  yes.style.transform = `scale(${scale})`;
+  yes.style.zIndex = "10";
 
   if(count===2){
     gif.src="3shocked-1.gif";
