@@ -57,7 +57,7 @@ yes.addEventListener("click",()=>{
   vid.style.display="block";
 
   gif.src="idc.gif";
-  text.innerHTML="Sorry for anything, I'm a bad person❤️";
+  text.innerHTML="Sorry for anything, I'm a bad person for u :(";
 
   yes.innerHTML =
   '<a href="https://wa.me/6289628116619" target="_blank">Message me</a>';
