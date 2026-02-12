@@ -45,7 +45,7 @@ no.addEventListener("click",()=>{
 
   }else{
     gif.src="5.crying.gif";
-    text.innerHTML="Pretty please,Give mea chance 🥺❤️";
+    text.innerHTML="Pretty please, Give me a chance 🥺❤️";
     no.style.display="none";
   }
 });
